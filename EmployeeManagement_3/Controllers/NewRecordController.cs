@@ -17,7 +17,8 @@ namespace EmployeeManagement_3.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var employees = _cc.EmpRegistration.ToList();
+            return View(employees);
         }
 
         public IActionResult Create()
